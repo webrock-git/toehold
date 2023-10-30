@@ -1,0 +1,78 @@
+.editor-styles-wrapper a.wp-block-toehold-button,
+a.wp-block-toehold-button {
+    padding: var(--wp--preset--spacing--md, 16px);
+    color: var(--wp--preset--color--neutral-500, #fff);
+    font-family: Figtree;
+    font-size: var(--wp--preset--font-size--large, 16px);
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    background: var(--wp--preset--color--primary-200, #2D8EFF);
+    transition: all 0.4s ease-in-out;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover, &:focus {
+        background: var(--wp--preset--color--primary-300, #4DA1FF);
+        color: var(--wp--preset--color--neutral-500, #fff);
+    }
+
+    &.is-style-social {
+        background: transparent;
+        border: none;
+        color: transparent;
+        padding: 0;
+
+        .toehold-btn-icon {
+            color: inherit;
+            font-size: 24px;
+        }
+    }
+
+    &.is-style-secondary {
+        background: var(--wp--preset--color--secondary-100, #EE8B00);
+        color: var(--wp--preset--color--neutral-500, #fff);
+
+        &:hover, &:focus {
+            background: var(--wp--preset--color--secondary-200, #FFA120);
+            color: var(--wp--preset--color--neutral-500, #fff);
+        }
+    }
+
+    &.is-style-tertiary{
+        background: var(--wp--preset--color--neutral-000, #000);
+        color: var(--wp--preset--color--neutral-500, #fff);
+
+        &:hover, &:focus {
+            background: var(--wp--preset--color--neutral-100, #6B717D);
+            color: var(--wp--preset--color--neutral-500, #fff);
+        }
+    }
+
+    &.is-style-ghost {
+        background: transparent;
+        color: var(--wp--preset--color--neutral-000, #000);
+        border: 2px solid var(--wp--preset--color--neutral-000, #000);
+
+        &:hover, &:focus {
+            background: var(--wp--preset--color--neutral-000, #000);
+            color: var(--wp--preset--color--neutral-500, #fff);
+        }
+    }
+
+    .toehold-btn-icon {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+            width: 1em;
+            height: 1em;
+        }
+    }
+}

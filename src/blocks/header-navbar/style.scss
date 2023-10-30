@@ -1,0 +1,247 @@
+@import "../../styles/mixin.scss";
+
+.header-navbar {
+	background: #FFF;
+	* {
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+	}
+
+	.header-navbar-inner {
+		display: flex;
+		align-items: center;
+		max-width: var(--wp--style--global--wide-size, 1100px);
+		margin: 0 auto;
+		height: 95px;
+
+		.header-navmenu-menu {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			gap: 20px;
+			list-style-type: none;
+
+			@include responsive(tablet) {
+				gap: 30px;
+				flex-direction: column;
+				align-items: flex-end;
+			}
+
+			@include responsive(phone) {
+				gap: 30px;
+			}
+
+			.header-navmenu-menu-item {
+				position: relative;
+				.header-navmenu-link {
+					color: #9AA0AE;
+					font-family: Figtree;
+					font-size: 14px;
+					font-style: normal;
+					font-weight: 500;
+					line-height: normal;
+					text-transform: uppercase;
+					text-decoration: none;
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					gap: 5px;
+
+					span{
+						white-space: nowrap;
+					}
+				}
+			}
+		}
+
+		.wp-block-toehold-navmenu {
+			@include responsive(tablet) {
+				position: fixed;
+				right: -100vw;
+				max-width: 400px;
+				display: block;
+				top: 0;
+				bottom: 0;
+				width: 100%;
+				background: #ffffff;
+				height: 100%;
+				padding: 32px;
+				z-index: 99999999999;
+				transition: all 0.4s ease-in-out;
+				overflow-y: auto;
+				scrollbar-width: none;
+				-ms-overflow-style: none;
+
+				&.is-open {
+					right: 0;
+				}
+
+				&::-webkit-scrollbar {
+					display: none;
+				}
+			}
+
+			@include responsive(phone) {
+				max-width: 300px;
+			}
+
+			.sidebar-header {
+				display: none;
+				margin-bottom: 63px;
+
+				@include responsive(tablet) {
+					display: flex;
+					align-items: center;
+				}
+
+				justify-content: space-between;
+
+				.close-button {
+					background: transparent;
+					border: none;
+					width: 24px;
+					height: 24px;
+					color: #5e5e5e;
+					cursor: pointer;
+					z-index: 9999999;
+    				position: relative;
+				}
+
+				.mobile-logo {
+					.custom-logo-link {
+						height: 42px;
+						display: block;
+
+						img {
+							width: 100%;
+							height: auto;
+						}
+					}
+				}
+			}
+
+			.navmenu-separator {
+				display: none;
+				max-width: 260px;
+				height: 1px;
+				background: rgba(154, 160, 174, 0.50);
+				margin-left: auto;
+				margin-top: 30px;
+				margin-bottom: 30px;
+
+				@include responsive(tablet) {
+					display: block;
+				}
+			}
+
+			.sidebar-topbar-container {
+				display: none;
+				
+				@include responsive(tablet) {
+					display: flex;
+					justify-content: flex-end;
+
+					.header-topbar-menu {
+						flex-direction: column;
+						display: flex;
+						width: 100%;
+						align-items: flex-end;
+
+						.wp-block-toehold-button{
+							&.is-style-social {
+								display: none;
+							}
+						}
+					}
+				}
+			}
+
+			.sidebar-extra-button-container {
+				display: none;
+
+				@include responsive(tablet) {
+					display: flex;
+					justify-content: flex-end;
+				}
+			}
+
+			.sidebar-social-button-container {
+				display: none;
+				margin-top: 24px;
+				@include responsive(tablet) {
+					display: flex;
+					justify-content: flex-end;
+					gap: 20px;
+					align-items: center;
+				}
+
+				.toehold-btn-icon {
+					font-size: 36px;
+				}
+			}
+		}
+
+		.hamburger-button {
+			display: none;
+			border: none;
+			background-color: transparent;
+			margin-left: auto;
+			cursor: pointer;
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+
+			@include responsive(tablet) {
+				display: block;
+			}
+
+			svg {
+				width: 25px;
+				height: 25px;
+			}
+		}
+
+
+		@include responsive(tablet) {
+			height: 106px;
+			padding: 0 20px;
+			.wp-block-toehold-button:not(.is-style-social) {
+				display: none;
+			}
+
+			.sidebar-extra-button-container {
+				padding-top: 20px;
+
+				.wp-block-toehold-button:not(.is-style-social) {
+					display: flex;
+					justify-content: flex-end;
+				}
+			}
+		}
+
+		.menu-overlay {
+			visibility: hidden;
+			opacity: 0;
+			transition: all 0.4s ease-in-out;
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			cursor: pointer;
+
+			@include responsive(tablet) {
+				visibility: hidden;
+				opacity: 0;
+				background: rgba(0, 0, 0, 0.5);
+				z-index: 999999999;
+			}
+
+			&.is-open {
+				visibility: visible;
+				opacity: 1;
+			}
+		}
+	}
+}

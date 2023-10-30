@@ -1,0 +1,12 @@
+@import "../../styles/mixin.scss";
+@import "./blocks";
+
+.wp-site-blocks {
+    @import "./footer";
+
+    & > .has-global-padding {
+        @include responsive(tablet) {
+            padding: 0 20px;
+        }
+    }
+}

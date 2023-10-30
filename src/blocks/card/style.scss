@@ -1,0 +1,10 @@
+@import "../../styles/mixin.scss";
+.wp-block-toehold-card{
+    & > *{
+        box-sizing: border-box;
+    }
+    .toehold-card-wrapper{
+        height: auto;
+        text-align: center;
+    }
+}

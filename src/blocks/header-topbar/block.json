@@ -1,0 +1,55 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "toehold/header-topbar",
+	"version": "1.0.0",
+	"title": "Header Topbar",
+	"category": "toehold",
+	"description": "Topbar for header template",
+	"parent": ["toehold/header-container"],
+	"example": {
+		"preview": true
+	},
+	"attributes": {
+		"blockClass": {
+			"type": "string"
+		},
+		"blockCSS": {
+			"type": "string"
+		},
+		"headerTopbarBackground": {
+			"type": "string",
+			"default": "#000"
+		},
+		"headerTopbarTextColor": {
+			"type": "string"
+		},
+		"headerTopbarMaxWidth": {
+			"type": "string"
+		},
+		"headerTopbarPadding": {
+			"type": "object"
+		},
+		"headerTopbarMargin": {
+			"type": "object"
+		},
+		"headerTopbarLinkFontSize": {
+			"type": "string"
+		},
+		"headerTopbarContentAlign": {
+			"type": "string",
+			"default": "flex-end"
+		},
+		"headerTopbarLinkGapBetween": {
+			"type": "string",
+			"default": "24px"
+		}
+	},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "toehold",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

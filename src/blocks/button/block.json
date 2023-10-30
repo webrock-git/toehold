@@ -1,0 +1,80 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "toehold/button",
+	"version": "1.0.0",
+	"title": "Toehold Button",
+	"category": "toehold",
+	"description": "Button for toehold",
+	"example": {
+		"preview": true
+	},
+	"attributes": {
+		"blockClass":{
+			"type": "string"
+		},
+		"blockCSS":{
+			"type": "string"
+		},
+		"svg": {
+			"type": "string"
+		},
+		"isShowIcon": {
+			"type": "boolean",
+			"default": false
+		},
+		"buttonText": {
+			"type": "string",
+			"default": "Button"
+		},
+		"buttonLink": {
+			"type": "object",
+			"default": {
+				"url": "#"
+			}
+		},
+		"buttonTitleAttr": {
+			"type": "string"
+		},
+		"buttonRelAttr": {
+			"type": "string"
+		},
+		"buttonWidth": {
+			"type": "string"
+		},
+		"buttonHeight": {
+			"type": "string"
+		}
+	},
+	"supports": {
+		"anchor": true,
+		"html": false
+	},
+	"styles": [
+		{
+			"name": "primary",
+			"label": "Primary",
+			"isDefault": true
+		},
+		{
+			"name": "secondary",
+			"label": "Secondary"
+		},
+		{
+			"name": "tertiary",
+			"label": "Tertiary"
+		},
+		{
+			"name": "ghost",
+			"label": "Ghost"
+		},
+		{
+			"name": "social",
+			"label": "Social"
+		}
+	],
+	"textdomain": "toehold",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

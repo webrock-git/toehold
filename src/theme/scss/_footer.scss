@@ -1,0 +1,6 @@
+footer.wp-block-template-part{
+    & > .wp-block-group > .wp-block-group{
+        max-width: var(--wp--style--global--wide-size, 1100px);
+        margin: 0 auto;
+    }
+}

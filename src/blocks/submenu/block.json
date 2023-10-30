@@ -1,0 +1,20 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "toehold/submenu",
+	"version": "1.0.0",
+	"title": "Header Submenu",
+	"category": "toehold",
+	"description": "Submenu for header template",
+	"parent": ["toehold/menu-item"],
+	"example": {
+		"preview": true
+	},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "toehold",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}
