@@ -1,28 +1,28 @@
-import { useBlockProps, useInnerBlocksProps, RichText } from '@wordpress/block-editor';
+import { useBlockProps, RichText } from '@wordpress/block-editor';
 import './editor.scss';
 import Settings from './settings';
 import classNames from 'classnames';
 
 export default function Edit({ attributes, setAttributes, clientId }) {
 	const blockProps = useBlockProps({
-		className: classNames('toehold-card', attributes?.blockClass)
+		className: classNames('toehold-card', attributes?.cardThumbnailRibbon?.key)
 	});
-	const innerBlockProps = useInnerBlocksProps({
-		className: 'toehold-card-image-wrapper',
-	}, {
-		allowedBlocks: ['toehold/card-image'],
-		template: [
-			['toehold/card-image', {}],
-		]
-	}
-	);
 	return (
 		<>
-			<style>{attributes?.blockCSS}</style>
 			<Settings attributes={attributes} setAttributes={setAttributes} clientId={clientId} />
 			<div {...blockProps}>
 				<div className="toehold-card-wrapper">
-					<div {...innerBlockProps}></div>
+					<div className='toehold-card-image-wrapper'>
+						<img
+							className="toehold-card-image"
+							src={attributes?.cardThumbnail?.url}
+							alt={attributes?.cardThumbnailAlt || attributes?.cardThumbnail?.alt}
+						/>
+						<div className="toehold-card-image-ribbon">
+							<span>{attributes?.cardThumbnailRibbon?.name}</span>
+						</div>
+						<h3 className="toehold-card-tour-name">{attributes?.cardTourName}</h3>
+					</div>
 					<div className='toehold-card-content'>
 						<div className="toehold-card-content-header">
 							<RichText

@@ -1,8 +1,11 @@
 import { useBlockProps } from '@wordpress/block-editor';
 import LinkAttributes from '@/components/link-attributes';
+import classNames from 'classnames';
 export default function save({ attributes }) {
 	const blockProps = useBlockProps.save({
-		className: attributes?.blockClass,
+		className: classNames(attributes?.blockClass, {
+			['has-icon']: attributes?.svg
+		}),
 		...LinkAttributes(attributes?.buttonLink),
 		title: attributes?.buttonTitleAttr ? attributes?.buttonTitleAttr : '',
 		rel: attributes?.buttonRelAttr ? attributes?.buttonRelAttr : '',

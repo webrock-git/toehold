@@ -1,187 +1,91 @@
 {
-	"$schema": "https://schemas.wp.org/trunk/block.json",
-	"apiVersion": 3,
-	"name": "toehold/card",
-	"version": "1.0.0",
-	"title": "Toehold Card",
-	"category": "toehold",
-	"description": "Toehold card for toehold theme",
-	"example": {
-		"attributes": {
-			"preview": true
-		}
-	},
-	"attributes": {
-		"blockClass": {
-			"type": "string"
-		},
-		"blockCSS": {
-			"type": "string"
-		},
-		"cardHeaderTitle": {
-			"type": "string",
-			"default": "Kabini"
-		},
-		"cardHeaderSubtitle": {
-			"type": "string",
-			"default": "Wildlife Photography Tour"
-		},
-		"cardContentDate": {
-			"type": "string",
-			"default": "Oct 30-Nov 1, 2023"
-		},
-		"cardContentDuration": {
-			"type": "string",
-			"default": "4N/5D"
-		},
-		"cardContentSkipper": {
-			"type": "string",
-			"default": "Vijendra"
-		},
-		"cardWrapperBackground": {
-			"type": "string"
-		},
-		"cardWrapperBorder": {
-			"type": "object"
-		},
-		"cardWrapperBoxShadow": {
-			"type": "object"
-		},
-		"cardWrapperBorderRadius": {
-			"type": "object"
-		},
-		"cardWrapperPadding": {
-			"type": "object"
-		},
-		"cardContentAlign": {
-			"type": "string",
-			"default": "center"
-		},
-		"cardTitleColor": {
-			"type": "string"
-		},
-		"cardTitleFontSize": {
-			"type": "string"
-		},
-		"cardTitleFontWeight": {
-			"type": "object",
-			"default": {
-				"fontStyle": "normal",
-				"fontWeight": "400"
-			}
-		},
-		"cardTitleMargin": {
-			"type": "object"
-		},
-		"cardSubTitleColor": {
-			"type": "string"
-		},
-		"cardSubTitleFontSize": {
-			"type": "string"
-		},
-		"cardSubTitleFontWeight": {
-			"type": "object",
-			"default": {
-				"fontStyle": "normal",
-				"fontWeight": "400"
-			}
-		},
-		"cardSubTitleMargin": {
-			"type": "object"
-		},
-		"cardDateLabelColor": {
-			"type": "string"
-		},
-		"cardDateLabelFontSize": {
-			"type": "string"
-		},
-		"cardDateLabelFontWeight": {
-			"type": "object",
-			"default": {
-				"fontStyle": "normal",
-				"fontWeight": "400"
-			}
-		},
-		"cardDateColor": {
-			"type": "string"
-		},
-		"cardDateFontSize": {
-			"type": "string"
-		},
-		"cardDateFontWeight": {
-			"type": "object",
-			"default": {
-				"fontStyle": "normal",
-				"fontWeight": "400"
-			}
-		},
-		"cardDateMargin": {
-			"type": "object"
-		},
-		"cardDurationLabelColor": {
-			"type": "string"
-		},
-		"cardDurationLabelFontSize": {
-			"type": "string"
-		},
-		"cardDurationLabelFontWeight": {
-			"type": "object",
-			"default": {
-				"fontStyle": "normal",
-				"fontWeight": "400"
-			}
-		},
-		"cardDurationColor": {
-			"type": "string"
-		},
-		"cardDurationFontSize": {
-			"type": "string"
-		},
-		"cardDurationFontWeight": {
-			"type": "object",
-			"default": {
-				"fontStyle": "normal",
-				"fontWeight": "400"
-			}
-		},
-		"cardDurationMargin": {
-			"type": "object"
-		},
-		"cardSkipperLabelColor": {
-			"type": "string"
-		},
-		"cardSkipperLabelFontSize": {
-			"type": "string"
-		},
-		"cardSkipperLabelFontWeight": {
-			"type": "object",
-			"default": {
-				"fontStyle": "normal",
-				"fontWeight": "400"
-			}
-		},
-		"cardSkipperColor": {
-			"type": "string"
-		},
-		"cardSkipperFontSize": {
-			"type": "string"
-		},
-		"cardSkipperFontWeight": {
-			"type": "object",
-			"default": {
-				"fontStyle": "normal",
-				"fontWeight": "400"
-			}
-		},
-		"cardSkipperMargin": {
-			"type": "object"
-		}
-	},
-	"supports": {
-		"html": false
-	},
-	"textdomain": "toehold",
-	"editorScript": "file:./index.js",
-	"editorStyle": "file:./index.css",
-	"style": "file:./style-index.css"
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "toehold/card",
+    "version": "1.0.0",
+    "title": "Tour Card",
+    "category": "toehold",
+    "description": "Toehold tour card for toehold theme",
+    "example": {
+        "attributes": {
+            "preview": true
+        }
+    },
+    "attributes": {
+        "blockClass": {
+            "type": "string"
+        },
+        "blockCSS": {
+            "type": "string"
+        },
+        "cardThumbnail": {
+            "type": "object",
+            "default": {
+                "url": "https://placehold.co/600x400?text=Toehold Card Thumbnail"
+            }
+        },
+        "cardThumbnailAlt": {
+            "type": "string"
+        },
+        "cardThumbnailRibbon": {
+            "type": "object",
+            "default": {
+                "name": "New",
+                "label": "New",
+                "key": "tour-card-new-ribbon"
+            }
+        },
+        "cardTourName": {
+            "type": "string",
+            "default": "Panther Paradise"
+        },
+        "cardTourLocation": {
+            "type": "string",
+            "default": "Kabini"
+        },
+        "cardTourRegion": {
+            "type": "string",
+            "default": "Karnataka, India"
+        },
+        "cardTourType": {
+            "type": "string",
+            "default": "Wildlife Photography Tour"
+        },
+        "cardTourDates": {
+            "type": "string",
+            "default": "Oct 30 - Nov 1, 2023"
+        },
+        "cardTourDuration": {
+            "type": "string",
+            "default": "4n/5d"
+        },
+        "cardTourPageLink": {
+            "type": "object"
+        },
+        "cardTourOriginalPrice": {
+            "type": "string",
+            "default": "₹ 1,50,000"
+        },
+        "cardTourOfferPrice": {
+            "type": "string",
+            "default": "₹ 1,00,000"
+        },
+        "cardTourLinkText": {
+            "type": "string",
+            "default": "Explore & Book"
+        },
+        "cardTourLinkURL": {
+            "type": "object",
+            "default": {
+                "url": "#"
+            }
+        }
+    },
+    "supports": {
+        "html": false
+    },
+    "textdomain": "toehold",
+    "editorScript": "file:./index.js",
+    "editorStyle": "file:./index.css",
+    "style": "file:./style-index.css"
 }

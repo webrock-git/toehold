@@ -5,9 +5,11 @@
 	"version": "1.0.0",
 	"title": "Toehold Button",
 	"category": "toehold",
-	"description": "Button for toehold",
+	"description": "Button for toehold theme",
 	"example": {
-		"preview": true
+		"attributes": {
+			"preview": true
+		}
 	},
 	"attributes": {
 		"blockClass":{
@@ -25,7 +27,7 @@
 		},
 		"buttonText": {
 			"type": "string",
-			"default": "Button"
+			"default": "1800 1200 901"
 		},
 		"buttonLink": {
 			"type": "object",

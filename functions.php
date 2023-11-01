@@ -12,8 +12,7 @@ function create_block_toehold_block_init()
         "menu-item",
         "topbar-divider",
         "button",
-        'card',
-        'card-image',
+        'card'
     ];
 
     foreach ($blocks as $block) {
@@ -46,7 +45,7 @@ function toehold_block_categories($categories, $post)
         array(
             array(
                 'slug'  => 'toehold',
-                'title' => __('Header Template', 'toehold'),
+                'title' => __('Toehold Blocks', 'toehold'),
             ),
         ),
         $categories

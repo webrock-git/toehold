@@ -1,25 +1,31 @@
 .editor-styles-wrapper a.wp-block-toehold-button,
 a.wp-block-toehold-button {
-    padding: var(--wp--preset--spacing--md, 16px);
+    padding: 16px 24px;
     color: var(--wp--preset--color--neutral-500, #fff);
-    font-family: Figtree;
-    font-size: var(--wp--preset--font-size--large, 16px);
+    font-family: "Figtree", sans-serif;
+    font-size: 16px;
     font-style: normal;
     font-weight: 600;
-    line-height: normal;
+    line-height: 24px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     gap: 8px;
-    border-radius: 8px;
+    border-radius: 5px;
     background: var(--wp--preset--color--primary-200, #2D8EFF);
     transition: all 0.4s ease-in-out;
     text-decoration: none;
     cursor: pointer;
+    margin-block-start: 0;
+    max-height: 56px;
 
     &:hover, &:focus {
         background: var(--wp--preset--color--primary-300, #4DA1FF);
         color: var(--wp--preset--color--neutral-500, #fff);
+    }
+
+    &.has-icon {
+        padding: 16px;
     }
 
     &.is-style-social {
@@ -71,8 +77,9 @@ a.wp-block-toehold-button {
         align-items: center;
 
         svg {
-            width: 1em;
-            height: 1em;
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
         }
     }
 }

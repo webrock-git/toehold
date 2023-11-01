@@ -2,10 +2,13 @@ import { useBlockProps } from '@wordpress/block-editor';
 import './editor.scss';
 import Settings from './settings';
 import LinkAttributes from '@/components/link-attributes';
+import classNames from 'classnames';
 
 export default function Edit({ attributes, setAttributes, clientId }) {
 	const blockProps = useBlockProps({
-		className: attributes?.blockClass,
+		className: classNames(attributes?.blockClass, {
+			['has-icon']: attributes?.svg
+		}),
 		...LinkAttributes(attributes?.buttonLink)
 	});
 
