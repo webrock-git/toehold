@@ -1,0 +1,181 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "toehold/destination-card",
+    "version": "1.0.0",
+    "title": "Destination Card",
+    "category": "toehold",
+    "description": "Toehold destination card for toehold theme",
+    "example": {
+        "attributes": {
+            "preview": true
+        }
+    },
+    "attributes": {
+        "blockClass": {
+            "type": "string"
+        },
+        "blockCSS": {
+            "type": "string"
+        },
+        "cardThumbnail": {
+            "type": "object",
+            "default": {
+                "url": "https://placehold.co/600x400?text=Toehold Card Thumbnail"
+            }
+        },
+        "destinationName": {
+            "type": "string",
+            "default": "Iceland"
+        },
+        "destinationRegion": {
+            "type": "string",
+            "default": "Europe"
+        },
+        "destinationDescription": {
+            "type": "string",
+            "default": "Kabini is a land of plenty but not predictable, with the exciting undercurrent of the unknown and imponderable woven innately into its enigmatic fabric."
+        },
+        "destinationPageLink": {
+            "type": "object",
+            "default": {
+                "url": "#"
+            }
+        },
+        "destinationPageLinkBtn": {
+            "type": "string",
+            "default": "Explore all Iceland Photo Tours"
+        },
+        "tour1Enable": {
+            "type": "boolean",
+            "default": true
+        },
+        "tour1Name": {
+            "type": "string",
+            "default": "Panther Paradise"
+        },
+        "tour1Type": {
+            "type": "string",
+            "default": "Wildlife Photography Tour"
+        },
+        "tour1Dates": {
+            "type": "string",
+            "default": "Oct 30 - Nov 1, 2023"
+        },
+        "tour1Duration": {
+            "type": "string",
+            "default": "4n/5d"
+        },
+        "tour1OriginalPrice": {
+            "type": "string",
+            "default": "₹ 1,50,000"
+        },
+        "tour1OfferPrice": {
+            "type": "string",
+            "default": "₹ 1,00,000"
+        },
+        "tour1PageLink": {
+            "type": "object",
+            "default": {
+                "url": "#"
+            }
+        },
+        "tour1PageLinkBtn": {
+            "type": "string",
+            "default": "Explore"
+        },
+        "tour2Enable": {
+            "type": "boolean",
+            "default": true
+        },
+        "tour2Name": {
+            "type": "string",
+            "default": "Panther Paradise"
+        },
+        "tour2Type": {
+            "type": "string",
+            "default": "Wildlife Photography Tour"
+        },
+        "tour2Dates": {
+            "type": "string",
+            "default": "Oct 30 - Nov 1, 2023"
+        },
+        "tour2Duration": {
+            "type": "string",
+            "default": "4n/5d"
+        },
+        "tour2OriginalPrice": {
+            "type": "string",
+            "default": "₹ 1,50,000"
+        },
+        "tour2OfferPrice": {
+            "type": "string",
+            "default": "₹ 1,00,000"
+        },
+        "tour2PageLink": {
+            "type": "object",
+            "default": {
+                "url": "#"
+            }
+        },
+        "tour2PageLinkBtn": {
+            "type": "string",
+            "default": "Explore"
+        },
+        "tour3Enable": {
+            "type": "boolean",
+            "default": true
+        },
+        "tour3Name": {
+            "type": "string",
+            "default": "Panther Paradise"
+        },
+        "tour3Type": {
+            "type": "string",
+            "default": "Wildlife Photography Tour"
+        },
+        "tour3Dates": {
+            "type": "string",
+            "default": "Oct 30 - Nov 1, 2023"
+        },
+        "tour3Duration": {
+            "type": "string",
+            "default": "4n/5d"
+        },
+        "tour3OriginalPrice": {
+            "type": "string",
+            "default": "₹ 1,50,000"
+        },
+        "tour3OfferPrice": {
+            "type": "string",
+            "default": "₹ 1,00,000"
+        },
+        "tour3PageLink": {
+            "type": "object",
+            "default": {
+                "url": "#"
+            }
+        },
+        "tour3PageLinkBtn": {
+            "type": "string",
+            "default": "Explore"
+        },
+        "cardButtonLinkText": {
+            "type": "string",
+            "default": "Explore all Iceland Photo Tours"
+        },
+        "cardButtonLinkURL": {
+            "type": "object",
+            "default": {
+                "url": "#"
+            }
+        }
+    },
+    "supports": {
+        "html": false
+    },
+    "textdomain": "toehold",
+    "editorScript": "file:./index.js",
+    "editorStyle": "file:./index.css",
+    "style": "file:./style-index.css"
+}

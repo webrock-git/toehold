@@ -7,7 +7,8 @@ import classNames from 'classnames';
 export default function Edit({ attributes, setAttributes, clientId }) {
 	const blockProps = useBlockProps({
 		className: classNames(attributes?.blockClass, {
-			['has-icon']: attributes?.svg
+			['has-icon']: attributes?.svg,
+			['is-small']: attributes?.isSmall
 		}),
 		...LinkAttributes(attributes?.buttonLink)
 	});

@@ -2,25 +2,22 @@ import {
     TextControl,
     PanelBody,
     __experimentalUnitControl as UnitControl,
-    TextareaControl
+    TextareaControl,
+    ToggleControl
 } from '@wordpress/components';
 import { memo, useEffect } from '@wordpress/element';
 import { __ } from '@wordpress/i18n';
 import { InspectorControls } from '@wordpress/block-editor';
 import MenuURL from '@/components/menu-url';
-import dynamicStyles from './style';
 
 const Settings = ({ attributes, setAttributes, clientId }) => {
     const {
-        blockClass,
+        isSmall,
         svg,
-        isShowIcon,
         buttonText,
         buttonLink,
         buttonTitleAttr,
         buttonRelAttr,
-        buttonWidth,
-        buttonHeight
     } = attributes;
 
     useEffect(() => {
@@ -29,23 +26,14 @@ const Settings = ({ attributes, setAttributes, clientId }) => {
         })
     }, [clientId]);
 
-    useEffect(() => {
-        setAttributes({
-            blockCSS: dynamicStyles(attributes),
-        })
-    }, [
-        blockClass,
-        svg,
-        isShowIcon,
-        buttonText,
-        buttonLink,
-        buttonWidth,
-        buttonHeight
-    ])
-
     return (
         <InspectorControls>
             <PanelBody title={'Button Settings'} initialOpen={true}>
+                <ToggleControl
+                    label="Is Small Button"
+                    checked={isSmall}
+                    onChange={(value) => setAttributes({ isSmall: value})}
+                />
                 <TextareaControl
                     help="Paste Your Svg here"
                     label="Button Icon"
@@ -74,18 +62,6 @@ const Settings = ({ attributes, setAttributes, clientId }) => {
                     label="Rel Attribute"
                     value={buttonRelAttr}
                     onChange={(value) => setAttributes({ buttonRelAttr: value })}
-                />
-            </PanelBody>
-            <PanelBody title={'Button Style'} initialOpen={false}>
-                <UnitControl
-                    label={'Button Width'}
-                    onChange={(value) => setAttributes({ buttonWidth: value })}
-                    value={buttonWidth}
-                />
-                <UnitControl
-                    label={'Button Height'}
-                    onChange={(value) => setAttributes({ buttonHeight: value })}
-                    value={buttonHeight}
                 />
             </PanelBody>
         </InspectorControls>

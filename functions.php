@@ -12,7 +12,9 @@ function create_block_toehold_block_init()
         "menu-item",
         "topbar-divider",
         "button",
-        'card'
+        'tour-card',
+        'destination-card',
+        'breadcrumbs',
     ];
 
     foreach ($blocks as $block) {
@@ -20,22 +22,15 @@ function create_block_toehold_block_init()
     }
 
     include_once get_theme_file_path('inc/block-styles.php');
+    include_once get_theme_file_path('inc/post-meta.php');
+    $scripts_path = include_once get_theme_file_path("assets/build/js/scripts.asset.php");
 
-    if ( function_exists( 'register_block_pattern_category' ) ) {
-        register_block_pattern_category(
-          'toehold',
-          array(
-                'label' => __( 'Toehold', 'toehold' ),
-                'description' => __( 'Toehold Patterns Block', 'toehold' ),
-           )
-       );
+    if (is_array($scripts_path) && isset($scripts_path['dependencies']) && isset($scripts_path['version'])) {
+        $dependencies = $scripts_path['dependencies'];
+        $version = $scripts_path['version'];
+
+        wp_register_script('toehold-theme-script', get_theme_file_uri('assets/build/js/scripts.js'), $dependencies, $version, true);
     }
-
-    register_block_pattern("toehold/404-page", array(
-        "title" => __("404 Page", "toehold"),
-        "category" => "toehold",
-        "content" => 'This is a 404 page',
-    ));
 }
 
 add_action('init', 'create_block_toehold_block_init');
@@ -58,5 +53,14 @@ function toehold_enqueue_assets()
     wp_enqueue_style('toehold-woocommerce-style');
     wp_register_style('toehold-theme-style', get_theme_file_uri('assets/build/css/style.css'), array(), TOEHOLD_VERSION);
     wp_enqueue_style('toehold-theme-style');
+    wp_enqueue_block_style('core/columns', [
+        'name' => 'toehold-theme-style',
+        'src'  => get_theme_file_uri('assets/build/css/style.css'),
+    ]);
+
+    if(is_admin()){
+        wp_enqueue_script('toehold-theme-script');
+    }
 }
-add_action("wp_enqueue_scripts", "toehold_enqueue_assets");
+add_action("enqueue_block_editor_assets", "toehold_enqueue_assets");
+add_action("enqueue_block_assets", "toehold_enqueue_assets");

@@ -1,0 +1,32 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "toehold/breadcrumbs",
+	"version": "1.0.0",
+	"title": "Breadcrumbs",
+	"category": "toehold",
+	"description": "Breadcrumbs for toehold theme",
+	"example": {
+		"attributes": {
+			"preview": true
+		}
+	},
+	"attributes": {
+		"svg": {
+			"type": "string"
+		},
+		"isShowIcon": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"supports": {
+		"anchor": true,
+		"html": false
+	},
+	"textdomain": "toehold",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

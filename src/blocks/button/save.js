@@ -4,7 +4,8 @@ import classNames from 'classnames';
 export default function save({ attributes }) {
 	const blockProps = useBlockProps.save({
 		className: classNames(attributes?.blockClass, {
-			['has-icon']: attributes?.svg
+			['has-icon']: attributes?.svg,
+			['is-small']: attributes?.isSmall
 		}),
 		...LinkAttributes(attributes?.buttonLink),
 		title: attributes?.buttonTitleAttr ? attributes?.buttonTitleAttr : '',

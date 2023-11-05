@@ -41,11 +41,9 @@
 		"buttonRelAttr": {
 			"type": "string"
 		},
-		"buttonWidth": {
-			"type": "string"
-		},
-		"buttonHeight": {
-			"type": "string"
+		"isSmall": {
+			"type": "boolean",
+			"default": false
 		}
 	},
 	"supports": {

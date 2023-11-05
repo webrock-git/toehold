@@ -14,6 +14,7 @@ module.exports = {
         ...defaultConfig.entry(),
         "css/style": './src/theme/scss/main.scss',
         "css/woocommerce": './src/theme/scss/woocommerce.scss',
+        "js/scripts": './src/theme/index.js',
     },
     output: {
         ...defaultConfig.output,
